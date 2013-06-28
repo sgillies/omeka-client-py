@@ -6,6 +6,8 @@ client = OmekaClient("http://localhost/omeka/api", "fd11f6fdcdcd2f524555b0897908
 
 # GET /items/:id
 response, content = client.get("items", id=1)
+assert response.status == 200
+assert content == "Python! Python! Python!"
 
 # GET /items
 #response, content = client.get("items")
